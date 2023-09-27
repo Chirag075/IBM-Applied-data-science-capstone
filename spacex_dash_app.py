@@ -1,4 +1,5 @@
-# Import required libraries
+
+#21bcm075# Import required libraries
 import pandas as pd
 import dash
 import dash_html_components as html
@@ -77,7 +78,20 @@ def get_pie_chart(launch_site):
                      title='Total Success Launches for Site {}'.format(launch_site))
     return (fig)
 
-# TASK 4:
+# @app.callback(Output(component_id='success-pie-chart', component_property='figure'),
+#               Input(component_id='site-dropdown', component_property='value'))
+# def get_pie_chart(launch_site):
+#     if launch_site == 'All Sites':
+#         fig = px.pie(values=spacex_df.groupby('Launch Site')['class'].mean(),
+#                      names=spacex_df.groupby('Launch Site')[
+#             'Launch Site'].first(),
+#             title='Total Success Launches by Site')
+#     else:
+#         fig = px.pie(values=spacex_df[spacex_df['Launch Site'] == str(launch_site)]['class'].value_counts(normalize=True),
+#                      names=spacex_df['class'].unique(),
+#                      title='Total Success Launches for Site {}'.format(launch_site))
+#     return (fig)
+# # TASK 4:
 # Add a callback function for `site-dropdown` and `payload-slider` as inputs, `success-payload-scatter-chart` as output
 
 
